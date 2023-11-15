@@ -1,0 +1,98 @@
+package projeto;
+
+import utils.Utils;
+import java.util.Date;
+public class Transacao {
+
+	private Double valor;
+	private String codigo_transacao;
+	private Date data_transacao;
+	private String descricao;
+	private String tipo;
+	private int agencia;
+	
+	private String nome_pagador;
+	private String nome_destinario;
+	
+	private String id_pagador;
+	private String id_destinario;
+
+
+	
+
+
+	public Transacao(Double valor, String id_pagador ,String id_destinario, String nome_pagador ,String nome_destinario ,String descricao,String tipo ,int agencia) {
+			
+
+		this.codigo_transacao = Utils.uuid();
+		this.data_transacao = Utils.date();
+
+		this.valor = valor;
+		this.descricao = descricao;
+		this.tipo = tipo;
+		this.agencia = agencia;
+
+		this.id_pagador = id_pagador;			
+		this.nome_pagador = nome_pagador;	
+		
+		this.nome_destinario = nome_destinario;
+		this.id_destinario = id_destinario;				
+	}
+
+
+	public String gerarRecibo(){
+		return "Valor: "+this.valor+ " Pagador: " + this.nome_pagador + " Agencia: " + agencia+ " conta: "  + this.id_pagador ;
+	}
+
+
+	public Double getValor() {
+		return valor;
+	}
+
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+
+	public String getCodigo_transacao() {
+		return codigo_transacao;
+	}
+
+
+	public Date getData_transacao() {
+		return data_transacao;
+	}
+
+
+	public void setDestinario(String destinario) {
+		this.nome_destinario = destinario;
+	}
+
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+
+	public String getTipo() {
+		return tipo;
+	}
+
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+	@Override
+	public String toString() {
+		return "Transacao [valor=" + valor + ", codigo_transacao=" + codigo_transacao + ", data_transacao="
+				+ data_transacao + ", destinario=" + this.id_destinario + ", descricao=" + descricao + ", tipo=" + tipo + "]";
+	}
+
+}

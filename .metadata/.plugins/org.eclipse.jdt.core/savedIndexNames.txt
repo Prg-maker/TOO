@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+/home/irobot/trabalho_oo/.metadata/.plugins/org.eclipse.jdt.core
+2949097923.index
+2748375292.index
+1865797976.index

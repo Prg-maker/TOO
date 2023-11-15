@@ -1,0 +1,11 @@
+package menu;
+import projeto.*;
+
+public class Menu {
+	
+	public static void main(String[] args) {
+			ContaPessoaFisica cc = new ContaPessoaFisica(null, null, null, null, null, null);
+			System.out.println("aqui");
+	}
+
+}
