@@ -1,0 +1,109 @@
+package menu;
+import java.util.Scanner;
+import projeto.*;
+import java.util.ArrayList;
+
+public class Menu {
+	
+	
+	static ArrayList<ContaPessoaFisica> contas;
+	static Scanner input = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+			
+		contas = new ArrayList<ContaPessoaFisica>();
+		operacao();
+		
+	}
+	
+	public static void operacao() {
+		System.out.println("------------------------------------------------------");
+		System.out.println("-------------Bem vindos a nossa Agência---------------");
+		System.out.println("------------------------------------------------------");
+		System.out.println("***** Selecione uma operação que deseja realizar *****");
+		System.out.println("------------------------------------------------------");
+		System.out.println("|   Opção 1 - Criar conta pessoa fisica  |");
+		System.out.println("|   Opção 2 - Listar contas	  			 |");
+		System.out.println("|   Opção 3 - Transferir 	 			 |");
+
+		int operacao = input.nextInt();
+		
+		switch (operacao) {
+		case 1: {
+			criarContaPessoaFisica();
+			break;
+		}
+		case 2:{
+			listarContas();
+			break;
+		}
+		case 3:{
+			transferir();
+		}
+		case 6: {
+			System.out.println("Acabou");
+			System.exit(0);
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + operacao);
+		
+			
+		}
+
+	}
+	
+	static void criarContaPessoaFisica() {
+		 System.out.print("Digite seu nome: ");
+	        String nome = input.next();
+
+	        System.out.print("Digite seu número de celular: ");
+	        String numeroCelular = input.next();
+
+	        System.out.print("Digite seu email: ");
+	        String email = input.next();
+
+	        System.out.print("Digite sua senha: ");
+	        String senha = input.next();
+
+	        System.out.print("Digite seu CPF: ");
+	        String cpf = input.next();
+
+	        System.out.print("Digite seu RG: ");
+	        String rg = input.next();
+	        
+	        ContaPessoaFisica contaPessoaFisica = new ContaPessoaFisica(nome, numeroCelular, email, senha, cpf, rg);
+	        contas.add(contaPessoaFisica);
+	        
+	        System.out.println("Sua Conta foi criada com sucesso!");
+		operacao();
+	}
+	
+	static Conta buscarContaPessoaFisica(String identificador) {
+		ContaPessoaFisica conta = null;
+		
+		if(contas.size() > 0) {
+			for(ContaPessoaFisica cc : contas) {
+				if(cc.getCpf() == identificador || cc.getRg() == identificador) {
+					conta = cc;
+				}
+			}
+		}
+		return conta;
+		
+	}
+	
+	static void listarContas() {
+		
+		if(contas.size() > 0) {
+			for(Conta  conta: contas) {
+				System.out.println(conta);
+			}
+		}else {
+			System.out.println("Não tem contas cadastradas");
+		}
+		
+		
+		operacao();
+	}
+
+}

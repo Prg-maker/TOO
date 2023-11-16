@@ -1,0 +1,9 @@
+package projeto;
+
+public class Menu {
+	public static void main(String[] args) {
+		ContaPessoaFisica cc = new ContaPessoaFisica("da", "da", "da", "da", "da", "asd");
+		System.out.println(cc);
+	}
+
+}

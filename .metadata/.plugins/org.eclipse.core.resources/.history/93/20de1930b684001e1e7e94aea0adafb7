@@ -1,0 +1,9 @@
+package projeto;
+
+public class Menu {
+	public static void main(String[] args) {
+		Test tt = new Test("daniel" , "test");
+		System.out.println(tt);
+	}
+
+}

@@ -1,0 +1,12 @@
+package projeto;
+
+public class Test {
+	private String name;
+	private String idade;
+	public Test(String name, String idade) {
+		this.name = name;
+		this.idade = idade;
+	}
+	
+
+}

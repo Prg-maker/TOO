@@ -1,0 +1,18 @@
+package menu;
+import projeto.*;
+import java.util.ArrayList;
+
+public class Menu {
+	
+	
+	static ArrayList<ContaPessoaFisica> contasPessoaFisica;
+	public static void main(String[] args) {
+			Conta cc = new ContaPessoaFisica("da", "da", "da", "da", "da", "asd");
+			System.out.println(cc);
+			
+		
+	}
+	
+
+
+}

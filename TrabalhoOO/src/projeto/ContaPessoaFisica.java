@@ -13,11 +13,16 @@ public class ContaPessoaFisica extends Conta{
 		this.cpf= cpf;
 		this.rg = rg;
 	}
+
+	@Override
+	public String toString() {
+		return "ContaPessoaFisica [cpf=" + cpf + ", rg=" + rg + ", nome=" + nome + ", numero_celular=" + numero_celular
+				+ ", email=" + email + ", senha=" + senha + ", saldo=" + saldo + ", id=" + id + ", cartao=" + cartao
+				+ ", transacao=" + transacao + "]";
+	}
 	
-	public boolean recarregarCelular(String numeroCelular , Double valor) {
+	public void recaregarCelular() {
 		
-		
-		return true;
 	}
 	
 
@@ -25,12 +30,17 @@ public class ContaPessoaFisica extends Conta{
 		return cpf;
 	}
 
-
 	
+
 	public String getRg() {
 		return rg;
 	}
 
+	
+	
+
+	
+	
 	
 	
 	

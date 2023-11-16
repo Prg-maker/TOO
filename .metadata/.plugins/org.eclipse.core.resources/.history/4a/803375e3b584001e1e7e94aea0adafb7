@@ -1,0 +1,18 @@
+package projeto;
+
+public class Test {
+	private String name;
+	private String idade;
+	
+	@Override
+	public String toString() {
+		return "Test [name=" + name + ", idade=" + idade + "]";
+	}
+
+	public Test(String name, String idade) {
+		this.name = name;
+		this.idade = idade;
+	}
+	
+
+}

@@ -1,0 +1,8 @@
+package projeto;
+
+public class Test {
+	private String name;
+	private String idade;
+	
+
+}
